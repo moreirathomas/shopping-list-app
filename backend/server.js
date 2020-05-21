@@ -8,15 +8,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// const USER = process.env.DB_CONNECT_USER;
-// const PASSWORD = process.env.DB_CONNECT_PASSWORD;
-
-// console.log(USER);
-// console.log(PASSWORD);
+// past your user and password strings
+const USER = "";
+const PASSWORD = "";
 
 mongoose
   .connect(
-    "mongodb+srv://user:qEX4gUHUk7qt3h6u@cluster0-nvcdl.mongodb.net/test?retryWrites=true&w=majority",
+    `mongodb+srv://${USER}:${PASSWORD}@cluster0-nvcdl.mongodb.net/test?retryWrites=true&w=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log("🟢 Connected to MongoDB\n☁️  API online"))
