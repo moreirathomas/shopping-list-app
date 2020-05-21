@@ -1,6 +1,6 @@
 # Demo
 
-to come...
+![App Demo](demo.gif)
 
 ***
 
