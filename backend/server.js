@@ -9,8 +9,8 @@ app.use(express.json());
 app.use(cors());
 
 // past your user and password strings
-const USER = "";
-const PASSWORD = "";
+const USER = "user";
+const PASSWORD = "qEX4gUHUk7qt3h6u";
 
 mongoose
   .connect(
