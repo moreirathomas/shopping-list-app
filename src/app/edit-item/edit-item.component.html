@@ -1,0 +1,20 @@
+<div class="edit-item-container">
+  <label
+    class="btn toggle-update-item"
+    [class.done]="item.done"
+    for="{{ 'update_' + item._id }}"
+  >
+    <i class="fas fa-dot-circle" *ngIf="item.done"></i>
+    <i class="far fa-dot-circle" *ngIf="!item.done"></i>
+    <input
+      id="{{ 'update_' + item._id }}"
+      type="checkbox"
+      (click)="updateItem(item)"
+      [checked]="item.done"
+    />
+  </label>
+  <label class="btn delete-item" for="{{ 'delete_' + item._id }}">
+    <i class="fas fa-trash-alt"></i>
+    <button (click)="deleteItem(item)" id="{{ 'delete_' + item._id }}"></button>
+  </label>
+</div>

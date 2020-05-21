@@ -1,0 +1,20 @@
+.edit-item-container {
+  display: flex;
+  justify-content: space-evenly;
+
+  & input,
+  button {
+    display: none;
+  }
+
+  .toggle-update-item {
+    background-color: var(--generic);
+    &.done {
+      background-color: var(--done);
+    }
+  }
+
+  .delete-item {
+    background-color: var(--delete);
+  }
+}

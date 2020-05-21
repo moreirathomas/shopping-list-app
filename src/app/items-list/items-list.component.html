@@ -1,0 +1,18 @@
+<app-add-item (add)="onAddItem($event)"></app-add-item>
+
+<main [class.no-item]="!items.length">
+  <table class="items-list" *ngIf="items.length">
+    <tr *ngFor="let item of items">
+      <td><app-item [item]="item"></app-item></td>
+      <td>
+        <app-edit-item
+          [item]="item"
+          (update)="onUpdateItem($event)"
+          (delete)="onDeleteItem($event)"
+        ></app-edit-item>
+      </td>
+    </tr>
+  </table>
+
+  <p class="no-item" *ngIf="!items.length">Nothing in the list</p>
+</main>

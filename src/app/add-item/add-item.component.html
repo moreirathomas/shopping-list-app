@@ -1,0 +1,6 @@
+<div class="add-item-container">
+  <label class="btn add-item" for="add_">
+    <i class="fas fa-plus"></i>
+  </label>
+  <input id="add_" [(ngModel)]="newItem.name" (keyup.enter)="addItem()" />
+</div>
