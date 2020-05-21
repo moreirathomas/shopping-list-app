@@ -1,6 +1,6 @@
 # Demo
 
-to come...
+![App Demo](demo.gif)
 
 ***
 
@@ -14,7 +14,7 @@ to come...
 ### Lancer le serveur api
 
 Executez `npm run server`.<br/>
-Le serveur d'api est lancée sur [http://localhost:3000/api/items](http://localhost:3000/api/items).
+Le serveur d'api est lancé sur [http://localhost:3000/api/items](http://localhost:3000/api/items).
 
 ### Lancer l'app
 
