@@ -1,0 +1,23 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+
+  .form-group {
+    display: flex;
+
+    input {
+      margin: 0.5rem 0;
+      &:focus {
+        outline: none;
+        border: solid 1px var(--generic);
+      }
+    }
+  }
+
+  .login-icon {
+    background-color: var(--generic);
+  }
+}

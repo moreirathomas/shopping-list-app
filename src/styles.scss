@@ -21,7 +21,23 @@
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
 
+  &.wide {
+    width: 191px;
+    height: 2rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+
+    :first-child {
+      margin-right: 0.5rem;
+    }
+  }
+
   &:active {
     transform: translateY(2px);
+  }
+
+  &:hover {
+    filter: brightness(1.2);
   }
 }

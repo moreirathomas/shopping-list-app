@@ -40,7 +40,6 @@ export class ItemsListComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getAllItems().subscribe((items) => {
       this.items = items;
-      console.log(this.items);
     });
   }
 }
