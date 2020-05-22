@@ -1,10 +1,12 @@
-const express = require('express');
-const Item = require('../models/item.model');
+// Middleware to define the routes for request to /api/items
+const express = require("express");
+const db = require("../helpers/db");
+const Item = db.Item;
 
 const app = express();
 
 // Read All
-app.get('/api/items', async (req, res) => {
+app.get("/api/items", async (req, res, next) => {
   const items = await Item.find({});
   try {
     res.send(items);
@@ -14,7 +16,7 @@ app.get('/api/items', async (req, res) => {
 });
 
 // Create
-app.post('/api/items', async (req, res) => {
+app.post("/api/items", async (req, res, next) => {
   const item = new Item(req.body);
   try {
     await item.save();
@@ -25,11 +27,11 @@ app.post('/api/items', async (req, res) => {
 });
 
 // Delete
-app.delete('/api/items/:id', async (req, res) => {
+app.delete("/api/items/:id", async (req, res, next) => {
   try {
     const item = await Item.findByIdAndDelete(req.params.id);
 
-    if (!item) res.status(404).send('No item found');
+    if (!item) res.status(404).send("No item found");
     res.status(200).send();
   } catch (err) {
     res.status(500).send(err);
@@ -37,10 +39,10 @@ app.delete('/api/items/:id', async (req, res) => {
 });
 
 // Update
-app.patch('/api/items/:id', async (req, res) => {
+app.patch("/api/items/:id", async (req, res, next) => {
   try {
     const item = await Item.findByIdAndUpdate(req.params.id, req.body);
-    if (!item) res.status(404).send('No item found');
+    if (!item) res.status(404).send("No item found");
     await item.save();
     res.send(item);
   } catch (err) {

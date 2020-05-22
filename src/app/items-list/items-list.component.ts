@@ -24,7 +24,7 @@ export class ItemsListComponent implements OnInit {
       .subscribe(
         (_) =>
           (this.items = this.items.filter(
-            (notDeletedItem) => notDeletedItem._id !== item._id
+            (notDeletedItem) => notDeletedItem.id !== item.id
           ))
       );
   }

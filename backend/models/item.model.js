@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const itemSchema = new mongoose.Schema({
   name: {
@@ -10,6 +10,16 @@ const itemSchema = new mongoose.Schema({
   done: { type: Boolean, required: true, default: false },
 });
 
-const Item = mongoose.model('Item', itemSchema);
+itemSchema.set("toJSON", {
+  // clone key _id as id
+  virtuals: true,
+  // do no include key _v
+  versionKey: false,
+  transform: function (doc, ret) {
+    // do no include key _id
+    delete ret._id;
+  },
+});
 
+const Item = mongoose.model("Item", itemSchema);
 module.exports = Item;

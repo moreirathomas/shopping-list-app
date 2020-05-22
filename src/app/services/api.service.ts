@@ -34,7 +34,7 @@ export class ApiService {
 
   public deleteItem(item: Item): Observable<null> {
     return this.http
-      .delete<null>(this.apiUrl + this.endpoint + `/${item._id}`)
+      .delete<null>(this.apiUrl + this.endpoint + `/${item.id}`)
       .pipe(
         map((res) => null),
         catchError((err) => throwError(err))
@@ -43,7 +43,7 @@ export class ApiService {
 
   public updateItem(item: Item): Observable<Item> {
     return this.http
-      .patch<Item>(this.apiUrl + this.endpoint + `/${item._id}`, item)
+      .patch<Item>(this.apiUrl + this.endpoint + `/${item.id}`, item)
       .pipe(
         map((res) => {
           return new Item(res);
