@@ -13,6 +13,7 @@ import { ItemComponent } from './item/item.component';
 import { ItemsListComponent } from './items-list/items-list.component';
 import { EditItemComponent } from './edit-item/edit-item.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AddItemComponent } from './add-item/add-item.component';
     ItemsListComponent,
     EditItemComponent,
     AddItemComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [ApiService, ItemDataService],

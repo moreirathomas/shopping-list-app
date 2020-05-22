@@ -1,0 +1,32 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(50vh + 10vmin);
+
+  .form-group {
+    display: flex;
+
+    input {
+      margin: 0.5rem 0;
+      &:focus {
+        outline: none;
+        border: solid 1px var(--generic);
+      }
+    }
+  }
+
+  .login-icon {
+    background-color: var(--generic);
+  }
+
+  .dummy-credentials {
+    margin: 4rem 0;
+    span {
+      background-color: var(--delete);
+      padding: 0 0.125rem;
+      border-radius: 4px;
+    }
+  }
+}

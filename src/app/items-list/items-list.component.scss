@@ -1,9 +1,19 @@
-main.no-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
+main {
+  background: var(--nc-bg-1);
+  margin-bottom: 4rem;
+  min-height: 50vh;
+
+  &.no-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .items-list tr td:last-child {
+    width: 20%;
+  }
 }
-.items-list tr td:last-child {
-  width: 20%;
+
+nav {
+  padding: 0 40px;
 }
