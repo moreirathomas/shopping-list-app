@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: calc(50vh + 10vmin);
 
   .form-group {
     display: flex;
@@ -19,5 +19,14 @@
 
   .login-icon {
     background-color: var(--generic);
+  }
+
+  .dummy-credentials {
+    margin: 4rem 0;
+    span {
+      background-color: var(--delete);
+      padding: 0 0.125rem;
+      border-radius: 4px;
+    }
   }
 }

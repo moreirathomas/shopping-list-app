@@ -6,8 +6,6 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.set("toJSON", {
-  // clone key _id as id
-  virtuals: true,
   // do no include key _v
   versionKey: false,
   transform: function (doc, ret) {

@@ -1,8 +1,16 @@
+<nav>
+  <button class="btn wide logout-icon">
+    <span>Logout</span>
+    <i class="fas fa-sign-out-alt"></i>
+  </button>
+</nav>
+<!-- ^ to put inside another compo => LogoutComponent + inside a wrapper w/ add item => sticky top-->
+
 <app-add-item (add)="onAddItem($event)"></app-add-item>
 
 <main [class.no-item]="!items.length">
   <table class="items-list" *ngIf="items.length">
-    <tr *ngFor="let item of items">
+    <tr *ngFor="let item of items.slice().reverse()">
       <td><app-item [item]="item"></app-item></td>
       <td>
         <app-edit-item

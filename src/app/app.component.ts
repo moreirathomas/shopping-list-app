@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Shopping List App 📒';
-  author = {
-    name: 'me',
+  links = {
     email: 'moreirathomas97@gmail.com',
+    repo: 'https://github.com/moreirathomas/shopping-list-app',
   };
-  repo: 'https://github.com/moreirathomas/shopping-list-app';
 }

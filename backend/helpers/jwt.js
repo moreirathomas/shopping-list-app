@@ -5,8 +5,7 @@ const expressJwt = require("express-jwt");
 function jwt() {
   const secret = config.secret;
   return expressJwt({ secret, isRevoked }).unless({
-    // routes that don't need auth
-    path: ["/login"],
+    path: ["/api/users/authenticate"],
   });
 }
 

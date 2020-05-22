@@ -25,6 +25,7 @@
     width: 191px;
     height: 2rem;
     border-radius: 4px;
+    padding: 0;
     display: flex;
     justify-content: center;
 
@@ -40,4 +41,7 @@
   &:hover {
     filter: brightness(1.2);
   }
+}
+h1 {
+  line-height: 1.25;
 }
