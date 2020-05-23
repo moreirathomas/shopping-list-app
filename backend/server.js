@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 // use JWT for authentication
-// app.use(jwt());
+app.use(jwt());
 
 // api routes
 app.use(usersRouter, itemsRouter);

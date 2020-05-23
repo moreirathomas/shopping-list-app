@@ -36,9 +36,26 @@ Vous devrez renseigner un utilisateur et un mot de passe dans le fichier `backen
 }
 ```
 
+## Configuration de l'utilisateur pour authentification
+
+L'application nécessite une authentification. Le système d'authentification vérifie si le nom d'utilisateur et le mot de passe fournis sont ceux d'un utilisateur de la base de donnée.<br/>
+Vous devrez au préalable créer un cet utilisateur dans votre propre base de donnée.<br/>
+Vous pouvez utiliser (Postman) [https://www.postman.com/] pour une mise en place facile.<br/>
+
+```js
+// requête POST à http://localhost:3000/api/users
+{
+	"username": "user",
+    "password": "user"
+}
+```
+
 ## Amélioration à venir
 
-- Page d'accueil avec authentification de l'utilisateur - **WIP**
+- API factice pour une utilisation simplifiée (dans l'idée d'une demo)
+- Refactorisation du code
+- Enregirstrement d'un nouvel utilisateur ?
+- Améliorations esthétiques
 
 ---
 
@@ -71,6 +88,27 @@ You will need to provide a user and password in the `backend/config.json` file. 
 }
 ```
 
+## User set up for authentication
+
+The app requires authentication. The authentication system checks if the username and the password provided are ones of a user in the database.<br/>
+You will need to setup such a user in your own data base beforehand.<br/>
+You can use (Postman)[https://www.postman.com/] for an easy set up. <br/>
+
+```js
+// POST request to http://localhost:3000/api/users
+{
+	"username": "user",
+    "password": "user"
+}
+```
+
+_I am currently working on user registration to avoid this inconvinience_
+
+## Log
+
 ## Improvments to come
 
-- Homepage with user authentication - **WIP**
+- Fake API implementation for easier usage (for a demo purposes)
+- Code refactoring
+- New user registration ?
+- Aesthetic improvements

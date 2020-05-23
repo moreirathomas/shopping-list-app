@@ -1,6 +1,4 @@
-//                                                //
-// Creates a model for the Item observable object //
-//                                                //
+// model for the observable <Item>
 export class Item {
   public id: string;
   public name = '';
