@@ -4,7 +4,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 import { User } from 'src/app//models/user.model';
-import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +16,7 @@ export class LoginComponent implements OnInit {
   returnUrl: string;
   error = '';
 
-  onSubmit() {
+  onLogin() {
     // simple if statement for conviniency... ~ would use html form validation
     if (this.user.username && this.user.password) {
       this.authService

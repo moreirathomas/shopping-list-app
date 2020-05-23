@@ -16,7 +16,7 @@
     flex: 0.5;
     transition: flex 0.4s ease-in-out;
     &:focus {
-      flex: 1;
+      flex: 0.75;
       outline: none;
       border: solid 1px var(--generic);
     }
