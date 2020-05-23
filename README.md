@@ -88,6 +88,8 @@ You will need to provide a user and password in the `backend/config.json` file. 
 }
 ```
 
+_Je travaille actuellement à l'enregistrement utilisateur pour éviter ce problème._
+
 ## User set up for authentication
 
 The app requires authentication. The authentication system checks if the username and the password provided are ones of a user in the database.<br/>
@@ -102,9 +104,7 @@ You can use (Postman)[https://www.postman.com/] for an easy set up. <br/>
 }
 ```
 
-_I am currently working on user registration to avoid this inconvinience_
-
-## Log
+_I am currently working on user registration to avoid this inconvenience_
 
 ## Improvments to come
 
