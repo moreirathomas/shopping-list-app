@@ -1,4 +1,4 @@
 {
-  "connectionString": "mongodb+srv://user:amDpuiNR05j39Tm0@cluster0-nvcdl.mongodb.net/test?retryWrites=true&w=majority",
+  "connectionString": "mongodb+srv://user:ure@-8C$2MDpYcf@cluster0-nvcdl.mongodb.net/test?retryWrites=true&w=majority",
   "secret": "THIS IS USED TO SIGN AND VERIFY JWT TOKENS, REPLACE IT WITH YOUR OWN SECRET, IT CAN BE ANY STRING"
 }

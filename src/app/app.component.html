@@ -1,5 +1,13 @@
 <header>
   <h1>{{ title }}</h1>
+
+  <nav>
+    <button class="btn wide logout-icon" (click)="logout()">
+      <span>Logout</span>
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </nav>
+  <!-- sticky top-->
 </header>
 <router-outlet></router-outlet>
 <footer>

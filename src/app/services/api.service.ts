@@ -12,7 +12,7 @@ import { Item } from 'src/app/models/item.model';
 })
 export class ApiService {
   private apiUrl = environment.apiUrl;
-  private endpoint = '/api/items';
+  private endpoint = '/items';
 
   public getAllItems(): Observable<Item[]> {
     return this.http.get<Item[]>(this.apiUrl + this.endpoint).pipe(

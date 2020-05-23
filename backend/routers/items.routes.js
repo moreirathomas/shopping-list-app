@@ -5,7 +5,7 @@ const Item = db.Item;
 
 const app = express();
 
-// Read All
+// Get All
 app.get("/api/items", async (req, res, next) => {
   const items = await Item.find({});
   try {

@@ -16,6 +16,10 @@ mongoose
     console.log(error);
   });
 
+// to shut up warning : (node:2128) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+// to check later
+mongoose.set("useCreateIndex", true);
+
 module.exports = {
   Item: require("../models/item.model"),
   User: require("../models/user.model"),
