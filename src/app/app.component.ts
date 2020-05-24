@@ -1,24 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Location } from '@angular/common';
-
 import { AuthService } from './services/auth.service';
+
+import { User } from './models/user.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
-  // misc
+export class AppComponent {
+  // miscellaneous
   title = 'Shopping List App 📒';
-  links = {
+  footerLinks = {
+    linkedin: 'https://www.linkedin.com/in/thomas-moreira97/',
     email: 'moreirathomas97@gmail.com',
     repo: 'https://github.com/moreirathomas/shopping-list-app',
   };
 
-  path: string;
+  // used to check if logout button needs to be displayed
+  currentUser: User;
 
   // logout : call the logout method from authService and navigate to the login page
   logout() {
@@ -26,13 +28,7 @@ export class AppComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  constructor(
-    private router: Router,
-    private location: Location,
-    private authService: AuthService
-  ) {}
-
-  ngOnInit(): void {
-    this.path = this.location.path();
+  constructor(private router: Router, private authService: AuthService) {
+    this.authService.currentUser.subscribe((user) => (this.currentUser = user));
   }
 }

@@ -13,9 +13,11 @@
 
   input {
     margin: 0;
-    flex: 0.5;
+    // initial left space in the flexbox to occupy
+    flex: 0.25;
     transition: flex 0.4s ease-in-out;
     &:focus {
+      // max left space to occupy on focus
       flex: 0.75;
       outline: none;
       border: solid 1px var(--generic);

@@ -2,6 +2,34 @@ h1 {
   line-height: 1.25;
 }
 
+.logout-icon {
+  background-color: var(--generic);
+
+  button {
+    display: none;
+  }
+
+  &::after {
+    content: "Logout";
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 191px;
+    height: 2rem;
+    border-radius: 4px;
+    background-color: var(--generic);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: 100%;
+    transition: transform ease-in-out 0.2s;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
 nav {
   width: max-content;
   display: flex;
