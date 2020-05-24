@@ -5,22 +5,22 @@ const mongoose = require("mongoose");
 
 const connectionOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 
-mongoose
-  .connect(
-    process.env.MONGODB_URI || config.connectionString,
-    connectionOptions
-  )
-  .then(() => console.log("🟢 Connected to MongoDB\n☁️  API online"))
-  .catch((error) => {
-    console.log("🔴 Failed to connect to MongoDB");
-    console.log(error);
-  });
+mongoose.Promise = global.Promise;
 
-// to shut up warning : (node:2128) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
-// to check later
-mongoose.set("useCreateIndex", true);
+async function connectDB() {
+  mongoose
+    .connect(config.connectionString, connectionOptions)
+    .then(() => console.log("🟢 Connected to MongoDB\n☁️  API online"))
+    .catch((error) => {
+      console.log("🔴 Failed to connect to MongoDB");
+      console.log(error);
+    });
+  // to shut up warning : (node:2128) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+  mongoose.set("useCreateIndex", true);
+}
 
 module.exports = {
+  connectDB,
   Item: require("../models/item.model"),
   User: require("../models/user.model"),
 };

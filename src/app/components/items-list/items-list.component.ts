@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ItemDataService } from 'src/app/services/item-data.service';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
-import { Item } from 'src/app//models/item.model';
-import { User } from '../models/user.model';
+import { Item, User } from '../../models';
 
 @Component({
   selector: 'app-items-list',

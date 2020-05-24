@@ -6,17 +6,20 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ApiService } from './services/api.service';
-import { ItemDataService } from './services/item-data.service';
-import { UserDataService } from './services/user-data.service';
-import { AuthService } from './services/auth.service';
-
-import { ItemComponent } from './item/item.component';
-import { ItemsListComponent } from './items-list/items-list.component';
-import { EditItemComponent } from './edit-item/edit-item.component';
-import { AddItemComponent } from './add-item/add-item.component';
-import { LoginComponent } from './login/login.component';
-import { JwtInterceptor } from './helpers/jwt.interceptor';
+import { JwtInterceptor } from './helpers';
+import {
+  ApiService,
+  AuthService,
+  ItemDataService,
+  UserDataService,
+} from './services';
+import {
+  ItemComponent,
+  ItemsListComponent,
+  EditItemComponent,
+  AddItemComponent,
+  LoginComponent,
+} from './components';
 
 @NgModule({
   declarations: [
