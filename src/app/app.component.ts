@@ -34,6 +34,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.path = this.location.path();
-    console.log(this.path);
   }
 }

@@ -2,13 +2,6 @@ h1 {
   line-height: 1.25;
 }
 
-.logout-icon {
-  background-color: var(--generic);
-}
-button {
-  display: none;
-}
-
 nav {
   width: max-content;
   display: flex;
@@ -18,4 +11,16 @@ nav {
   right: 0;
   z-index: 1;
   margin: 0 0 0 auto;
+}
+
+.logout-icon {
+  background-color: var(--generic);
+
+  &:hover {
+    background-color: var(--delete);
+  }
+}
+
+button {
+  display: none;
 }
