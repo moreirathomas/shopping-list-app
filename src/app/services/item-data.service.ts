@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { ApiService } from './api.service';
-import { Item } from 'src/app/models/item.model';
+import { ApiService } from '../services';
+import { Item } from '../models';
 
 @Injectable({
   providedIn: 'root',
