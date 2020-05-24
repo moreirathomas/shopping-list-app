@@ -1,21 +1,19 @@
 <header>
   <h1>{{ title }}</h1>
 </header>
-<nav *ngIf="!path">
-  <!-- <button class="btn wide logout-icon" (click)="logout()">
-    <span>Logout</span>
-    <i class="fas fa-sign-out-alt"></i>
-  </button> -->
 
+<nav *ngIf="currentUser">
   <label class="btn logout-icon" for="logout">
     <i class="fas fa-sign-out-alt"></i>
     <button id="logout" (click)="logout()"></button>
   </label>
 </nav>
+
 <router-outlet></router-outlet>
+
 <footer>
-  Made by <a href="mailto:{{ links.email }}">me</a>. © 2020
+  Made by <a href="{{ footerLinks.linkedin }}">me</a>.
   <br />
-  Check this app
-  <a href="{{ links.repo }}" target="_blank">repo</a>.
+  Send a <a href="mailto:{{ footerLinks.email }}">message</a> 👋 or check out
+  this app <a href="{{ footerLinks.repo }}" target="_blank">repo</a> 👀
 </footer>

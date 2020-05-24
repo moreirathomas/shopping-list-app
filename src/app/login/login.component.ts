@@ -14,7 +14,10 @@ export class LoginComponent implements OnInit {
   user = new User();
 
   returnUrl: string;
-  error = '';
+  error: string;
+
+  // showing/hidding the db connect hints
+  showMore = false;
 
   onLogin() {
     // simple if statement for conviniency... ~ would use html form validation
@@ -26,12 +29,10 @@ export class LoginComponent implements OnInit {
           (data) => {
             this.router.navigate([this.returnUrl]);
           },
-          (error) => (this.error = error)
+          (error) => (this.error = error.error.message)
         );
     } else {
-      window.alert(
-        'Invalid credentials ⛔️\nYou can find them below the form 👇'
-      );
+      this.error = 'Enter username and password';
     }
   }
 

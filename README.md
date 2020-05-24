@@ -11,6 +11,9 @@
 
 ## Comment voir ce projet
 
+`git clone <ce repo>` <br/>
+`npm i`
+
 ### Lancer le serveur api
 
 Executez `npm run server`.<br/>
@@ -62,6 +65,9 @@ Vous pouvez utiliser (Postman) [https://www.postman.com/] pour une mise en place
 # English version
 
 ## How to check this project
+
+`git clone <ce repo>` <br/>
+`npm i`
 
 ### Running the api server
 
